@@ -1,3 +1,75 @@
 .blue-eyes .eye-color {
   fill: #3dc0e3;
 }
+
+.sad .mouth {
+  transform: scale(0.5) rotate(180deg);
+  transform-origin: 340px 390px;
+}
+
+@keyFrames moveEyes {
+  20% {
+    transform: translate(-18px, -20px);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  65% {
+    transform: translate(10px, -10px);
+  }
+}
+
+.move .inner-eye-group {
+  animation: moveEyes 10s infinite;
+}
+
+@keyframes leftWhiskers {
+  20% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(-5deg);
+  }
+}
+
+.move .left-whiskers {
+  animation: leftWhiskers 10s infinite;
+  transform-origin: 325px 350px
+}
+
+@keyframes rightWhiskers {
+  5% {
+    transform: rotate(-6deg);
+  }
+  90% {
+    transform: rotate(3deg);
+  }
+}
+
+.move .right-whiskers {
+  animation: leftWhiskers 10s infinite;
+  transform-origin: 325px 350px
+}
+
+@keyframes moveHead {
+  20% {
+    transform: rotateY(10deg) rotateX(10deg);
+ }
+  40% {
+    transform: rotateY(25deg) rotateX(10deg);
+  }
+  60% {
+    transform: rotateY(-10deg) rotateX(-10deg);
+  }
+  80% {
+    transform: rotateY(-10deg) rotateX(-16deg);
+  }
+}
+
+.move {
+  animation: moveHead 10s infinite;
+}
+
+.svg-container {
+  perspective: 1200px;
+}
